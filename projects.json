@@ -12,7 +12,7 @@
       "deployment adapters"
     ],
     "status": "Domain prototype",
-    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/deployment-control-plane"
+    "repositoryUrl": "https://github.com/saul-chaudry/deployment-control-plane"
   },
   {
     "group": "Full Stack",
@@ -27,7 +27,7 @@
       "database persistence"
     ],
     "status": "Domain prototype",
-    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/incident-status-platform"
+    "repositoryUrl": "https://github.com/saul-chaudry/incident-status-platform"
   },
   {
     "group": "Full Stack",
@@ -57,7 +57,7 @@
       "Micrometer integration"
     ],
     "status": "Domain prototype",
-    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/kubernetes-microservices-platform"
+    "repositoryUrl": "https://github.com/saul-chaudry/kubernetes-microservices-platform"
   },
   {
     "group": "Java",
@@ -102,7 +102,7 @@
       "AKS sandbox validation"
     ],
     "status": "Domain prototype",
-    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/aks-deployment-platform"
+    "repositoryUrl": "https://github.com/saul-chaudry/aks-deployment-platform"
   },
   {
     "group": ".NET",
@@ -147,7 +147,7 @@
       "identity-scoped cloud tests"
     ],
     "status": "Domain prototype",
-    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/cloud-compliance-scanner"
+    "repositoryUrl": "https://github.com/saul-chaudry/cloud-compliance-scanner"
   },
   {
     "group": "Python",
@@ -162,7 +162,7 @@
       "allowlisted remediation plans"
     ],
     "status": "Domain prototype",
-    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/infrastructure-drift-detector"
+    "repositoryUrl": "https://github.com/saul-chaudry/infrastructure-drift-detector"
   },
   {
     "group": "Python",
@@ -192,7 +192,7 @@
       "kind-cluster integration tests"
     ],
     "status": "Domain prototype",
-    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/kubernetes-operator"
+    "repositoryUrl": "https://github.com/saul-chaudry/kubernetes-operator"
   },
   {
     "group": "Go",
@@ -237,7 +237,7 @@
       "promotion measurements"
     ],
     "status": "Domain prototype",
-    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/multi-cloud-gitops-platform"
+    "repositoryUrl": "https://github.com/saul-chaudry/multi-cloud-gitops-platform"
   },
   {
     "group": "DevOps",
