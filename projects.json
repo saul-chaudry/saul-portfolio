@@ -1,0 +1,272 @@
+[
+  {
+    "group": "Full Stack",
+    "slug": "deployment-control-plane",
+    "title": "Deployment Control Plane",
+    "stack": "TypeScript, React, Node.js, PostgreSQL",
+    "implemented": "Release state machine, optimistic concurrency, RBAC and audit events",
+    "pending": [
+      "WebSocket transport",
+      "React console",
+      "durable rollout state",
+      "deployment adapters"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/deployment-control-plane"
+  },
+  {
+    "group": "Full Stack",
+    "slug": "incident-status-platform",
+    "title": "Incident Management and Status Platform",
+    "stack": "TypeScript, React, Node.js, PostgreSQL",
+    "implemented": "Incident transitions, escalation deadlines and public-safe status projections",
+    "pending": [
+      "On-call schedules",
+      "notification adapters",
+      "React status page",
+      "database persistence"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/incident-status-platform"
+  },
+  {
+    "group": "Full Stack",
+    "slug": "cloud-cost-intelligence",
+    "title": "Cloud Cost Intelligence Dashboard",
+    "stack": "TypeScript, React, Node.js, PostgreSQL",
+    "implemented": "Integer-cent billing aggregation, team attribution and baseline anomaly detection",
+    "pending": [
+      "Billing CSV adapters",
+      "React dashboard",
+      "cloud billing ingestion",
+      "scheduled alerts"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/cloud-cost-intelligence"
+  },
+  {
+    "group": "Java",
+    "slug": "kubernetes-microservices-platform",
+    "title": "Kubernetes-Native Microservices Platform",
+    "stack": "Java 21, Spring Boot, Helm, Prometheus",
+    "implemented": "Validated autoscaling decisions and canary promotion gates",
+    "pending": [
+      "Spring service",
+      "Helm charts",
+      "Kubernetes deployment",
+      "Micrometer integration"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/kubernetes-microservices-platform"
+  },
+  {
+    "group": "Java",
+    "slug": "config-secrets-service",
+    "title": "Centralized Config and Secrets Service",
+    "stack": "Java 21, Spring Cloud Config, Vault",
+    "implemented": "Tenant-scoped configuration revisions, secret references and audit metadata",
+    "pending": [
+      "Vault adapter",
+      "Spring Cloud Config transport",
+      "rotation workflows",
+      "durable audit storage"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/config-secrets-service"
+  },
+  {
+    "group": "Java",
+    "slug": "chaos-resilience-harness",
+    "title": "Chaos and Resilience Test Harness",
+    "stack": "Java 21, Resilience4j, Spring Boot",
+    "implemented": "Circuit-breaker state transitions with a deterministic injected clock",
+    "pending": [
+      "HTTP failure injection",
+      "Resilience4j adapter",
+      "recovery experiments",
+      "measured reports"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/chaos-resilience-harness"
+  },
+  {
+    "group": ".NET",
+    "slug": "aks-deployment-platform",
+    "title": "AKS Deployment Platform in .NET",
+    "stack": "C#, .NET 9, Azure DevOps, Bicep",
+    "implemented": "Validated deployment-stage planning and digest-only artifact references",
+    "pending": [
+      "Azure DevOps adapter",
+      "Bicep infrastructure",
+      "Key Vault integration",
+      "AKS sandbox validation"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/aks-deployment-platform"
+  },
+  {
+    "group": ".NET",
+    "slug": "aspire-observability-suite",
+    "title": "Aspire Observability Suite",
+    "stack": "C#, .NET 9, Aspire, OpenTelemetry",
+    "implemented": "Activity trace-parent propagation and sensitive-tag filtering",
+    "pending": [
+      "Aspire orchestration",
+      "OTLP export",
+      "health endpoints",
+      "dashboards"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/aspire-observability-suite"
+  },
+  {
+    "group": ".NET",
+    "slug": "secure-container-supply-chain",
+    "title": "Secure Container Supply Chain",
+    "stack": "C#, .NET 9, Trivy, Cosign",
+    "implemented": "Deny-by-default policy decisions for supplied image evidence",
+    "pending": [
+      "Cryptographic signature verification",
+      "scanner adapter",
+      "CI policy gate",
+      "cluster admission integration"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/secure-container-supply-chain"
+  },
+  {
+    "group": "Python",
+    "slug": "cloud-compliance-scanner",
+    "title": "Cloud Compliance Scanner",
+    "stack": "Python, AWS, policy rules",
+    "implemented": "Read-only checks over synthetic IAM, S3 and network inventories",
+    "pending": [
+      "AWS collector",
+      "policy exceptions",
+      "scheduled reports",
+      "identity-scoped cloud tests"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/cloud-compliance-scanner"
+  },
+  {
+    "group": "Python",
+    "slug": "infrastructure-drift-detector",
+    "title": "Infrastructure Drift Detector",
+    "stack": "Python, Terraform, cloud inventory",
+    "implemented": "Structured comparison of managed attributes with missing-resource reporting",
+    "pending": [
+      "Terraform plan adapter",
+      "live cloud inventory",
+      "alerts",
+      "allowlisted remediation plans"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/infrastructure-drift-detector"
+  },
+  {
+    "group": "Python",
+    "slug": "pipeline-orchestration-service",
+    "title": "Pipeline Orchestration Service",
+    "stack": "Python, FastAPI, PostgreSQL",
+    "implemented": "DAG validation, bounded retries and dependency-aware task execution",
+    "pending": [
+      "FastAPI adapter",
+      "durable runs",
+      "scheduled backfills",
+      "distributed worker leases"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/pipeline-orchestration-service"
+  },
+  {
+    "group": "Go",
+    "slug": "kubernetes-operator",
+    "title": "Kubernetes Operator",
+    "stack": "Go, Kubernetes, controller-runtime",
+    "implemented": "Deterministic desired-state reconciliation and generation-aware status",
+    "pending": [
+      "Custom resource definition",
+      "controller-runtime adapter",
+      "finalizers",
+      "kind-cluster integration tests"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/kubernetes-operator"
+  },
+  {
+    "group": "Go",
+    "slug": "prometheus-exporter-suite",
+    "title": "Prometheus Exporter Suite",
+    "stack": "Go, Prometheus",
+    "implemented": "Validated metric labels and deterministic text exposition",
+    "pending": [
+      "Collectors",
+      "HTTP endpoint",
+      "cardinality budgets",
+      "benchmarks"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/prometheus-exporter-suite"
+  },
+  {
+    "group": "Go",
+    "slug": "deployment-verification-cli",
+    "title": "Deployment Verification CLI",
+    "stack": "Go, HTTP, deployment hooks",
+    "implemented": "Concurrent HTTP health checks with context cancellation",
+    "pending": [
+      "Command-line flags",
+      "rollback hook adapter",
+      "TLS policy",
+      "release-report persistence"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/deployment-verification-cli"
+  },
+  {
+    "group": "DevOps",
+    "slug": "multi-cloud-gitops-platform",
+    "title": "Multi-Cloud Kubernetes Platform with GitOps",
+    "stack": "Terraform, EKS, AKS, ArgoCD, Helm, Kustomize",
+    "implemented": "Local validated GitOps environment generator for AWS and Azure targets",
+    "pending": [
+      "Terraform modules",
+      "EKS and AKS sandbox builds",
+      "ArgoCD sync",
+      "promotion measurements"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/multi-cloud-gitops-platform"
+  },
+  {
+    "group": "DevOps",
+    "slug": "slo-error-budget-observability",
+    "title": "SLO and Error-Budget Observability Stack",
+    "stack": "OpenTelemetry, Prometheus, Alertmanager, Grafana, Loki",
+    "implemented": "SLO arithmetic, burn-rate evaluation and a sample recording-rule template",
+    "pending": [
+      "Instrumented sample service",
+      "Grafana dashboard",
+      "burn-alert validation",
+      "runbook drill"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/slo-error-budget-observability"
+  },
+  {
+    "group": "DevOps",
+    "slug": "secure-supply-chain-pipeline",
+    "title": "Secure Software Supply Chain Pipeline",
+    "stack": "GitHub Actions, Trivy, Cosign, Kyverno",
+    "implemented": "Offline supplied-evidence policy evaluation and reviewed gate reporting",
+    "pending": [
+      "Trivy scan integration",
+      "Cosign verification",
+      "Kyverno admission policy",
+      "blocked-image cluster demonstration"
+    ],
+    "status": "Domain prototype",
+    "repositoryUrl": "https://github.com/saul-chaudry/saul-portfolio/tree/main/projects/secure-supply-chain-pipeline"
+  }
+]

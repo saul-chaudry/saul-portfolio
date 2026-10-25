@@ -1,0 +1,4 @@
+package verify
+import("context";"net/http";"sync";"fmt")
+type Result struct{URL string;Healthy bool;Error string}
+func Check(ctx context.Context,urls []string,concurrency int,client *http.Client)([]Result,error){if concurrency<1||client==nil{return nil,fmt.Errorf("invalid configuration")};results:=make([]Result,len(urls));sem:=make(chan struct{},concurrency);var wg sync.WaitGroup;for i,url:=range urls{wg.Add(1);go func(i int,url string){defer wg.Done();r:=Result{URL:url};select{case sem<-struct{}{}:defer func(){<-sem}();case <-ctx.Done():r.Error=ctx.Err().Error();results[i]=r;return};request,err:=http.NewRequestWithContext(ctx,"GET",url,nil);if err!=nil{r.Error=err.Error();results[i]=r;return};response,err:=client.Do(request);if err!=nil{r.Error=err.Error()}else{r.Healthy=response.StatusCode>=200&&response.StatusCode<300;response.Body.Close();if !r.Healthy{r.Error=fmt.Sprint(response.StatusCode)}};results[i]=r}(i,url)};wg.Wait();return results,ctx.Err()}

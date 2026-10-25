@@ -1,0 +1,3 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {Incident} from './core.ts';
+test('escalation deadline and resolution',()=>{const i=new Incident(0,10);assert.equal(i.tick(9),false);assert.equal(i.tick(10),true);assert.equal(i.tick(10),false);i.update('identified','Cause identified');i.update('monitoring','Monitoring recovery');i.update('resolved','Recovered');assert.equal(i.tick(100),false);assert.equal(i.escalationLevel(),1);assert.ok(!('escalation' in i.publicStatus()))});
+test('reject skipped states',()=>assert.throws(()=>new Incident(0,10).update('resolved','done')));

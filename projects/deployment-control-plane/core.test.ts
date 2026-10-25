@@ -1,0 +1,3 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {ControlPlane} from './core.ts';
+test('permissions, version and audit boundaries',()=>{const c=new ControlPlane();assert.throws(()=>c.transition('u','reader','deploying',0));c.transition('u','operator','deploying',0);assert.throws(()=>c.transition('u','operator','healthy',0));const s=c.transition('u','operator','healthy',1);assert.equal(s.audit.length,2);s.audit[0].actor='tamper';assert.equal(c.snapshot().audit[0].actor,'u')});
+test('reject impossible transitions',()=>assert.throws(()=>new ControlPlane().transition('u','operator','healthy',0)));

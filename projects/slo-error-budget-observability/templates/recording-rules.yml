@@ -1,0 +1,6 @@
+# Sample metric contract; instrument a real service before applying.
+groups:
+  - name: service-slo
+    rules:
+      - record: service:request_error_ratio:rate5m
+        expr: sum(rate(http_requests_total{status=~"5.."}[5m])) / sum(rate(http_requests_total[5m]))

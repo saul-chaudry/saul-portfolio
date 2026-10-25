@@ -1,0 +1,50 @@
+name: Verify project collection
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        include: [{"slug": "deployment-control-plane", "runtime": "node"}, {"slug": "incident-status-platform", "runtime": "node"}, {"slug": "cloud-cost-intelligence", "runtime": "node"}, {"slug": "kubernetes-microservices-platform", "runtime": "java"}, {"slug": "config-secrets-service", "runtime": "java"}, {"slug": "chaos-resilience-harness", "runtime": "java"}, {"slug": "aks-deployment-platform", "runtime": "dotnet"}, {"slug": "aspire-observability-suite", "runtime": "dotnet"}, {"slug": "secure-container-supply-chain", "runtime": "dotnet"}, {"slug": "cloud-compliance-scanner", "runtime": "python"}, {"slug": "infrastructure-drift-detector", "runtime": "python"}, {"slug": "pipeline-orchestration-service", "runtime": "python"}, {"slug": "kubernetes-operator", "runtime": "go"}, {"slug": "prometheus-exporter-suite", "runtime": "go"}, {"slug": "deployment-verification-cli", "runtime": "go"}, {"slug": "multi-cloud-gitops-platform", "runtime": "python"}, {"slug": "slo-error-budget-observability", "runtime": "python"}, {"slug": "secure-supply-chain-pipeline", "runtime": "python"}]
+    defaults:
+      run:
+        working-directory: projects/${{ matrix.slug }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        if: matrix.runtime == 'node'
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        if: matrix.runtime == 'python'
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        if: matrix.runtime == 'java'
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-dotnet@v4
+        if: matrix.runtime == 'dotnet'
+        with:
+          dotnet-version: '9.0.x'
+      - uses: actions/setup-go@v5
+        if: matrix.runtime == 'go'
+        with:
+          go-version: '1.23'
+      - run: node --test
+        if: matrix.runtime == 'node'
+      - run: python -m unittest discover -s tests -v
+        if: matrix.runtime == 'python'
+      - run: javac Main.java
+        if: matrix.runtime == 'java'
+      - run: java Main
+        if: matrix.runtime == 'java'
+      - run: dotnet run
+        if: matrix.runtime == 'dotnet'
+      - run: go test -race ./...
+        if: matrix.runtime == 'go'

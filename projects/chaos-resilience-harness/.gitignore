@@ -1,0 +1,10 @@
+.env
+__pycache__/
+.venv/
+node_modules/
+bin/
+obj/
+*.class
+.terraform/
+*.tfstate*
+artifacts/

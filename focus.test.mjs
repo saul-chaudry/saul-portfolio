@@ -1,0 +1,4 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import {paths,normalize,select,url} from './focus.mjs';const projects=JSON.parse(readFileSync(new URL('./projects.json',import.meta.url)));
+test('default selection represents all six engineering areas',()=>{const selected=select(projects,normalize(''));assert.equal(selected.length,6);assert.equal(new Set(selected.map(p=>p.group)).size,6)});
+test('each focused link contains only its own three projects',()=>{for(const [key,group] of Object.entries(paths)){assert.equal(normalize(url(key)),key);const items=select(projects,key);assert.equal(items.length,3);assert.ok(items.every(p=>p.group===group))}});
+test('search and invalid focus handling',()=>{assert.equal(normalize('?focus=unknown'),'selected');assert.equal(select(projects,'all').length,18);assert.equal(select(projects,'java','canary').length,1);assert.equal(select(projects,'dotnet','canary').length,0)});
